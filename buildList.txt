@@ -1,0 +1,46 @@
+//Overlay Fixes (comment out when testing w/ reload)
+american, swd_ovl, 0x801e8fac, 0x0, src/state/swordFix.c
+
+//other Timer stuff
+american, exe, 0x80152334, 0x0, src/timer/showRoomTable.c
+american, exe, 0x80152370, 0x0, src/timer/showRoomTable2.c
+american, exe, 0x801293e0, 0x0, src/timer/doorRoomHook.s
+american, exe, 0x80129468, 0x0, src/timer/doorRoomHook2.s
+
+//Stage Select Folder
+american, exe, 0x800ffff4, 0x0, src/stageselect/stageselectoption.c
+american, exe, 0x800ffacc, 0x0, src/stageselect/half.s
+american, exe, 0x800ffe64, 0x0, src/stageselect/half2.s
+american, exe, 0x80100060, 0x0, src/stageselect/stageSelectMusicCancel.s
+american, exe, 0x80100b30, 0x0, src/stageselect/midCancel.s
+american, exe, 0x80100b18, 0x0, src/stageselect/checkpointCancel.s
+american, exe, 0x800ffcb4, 0x0, src/stageselect/wily.s
+american, exe, 0x8010123c, 0x0, src/stageselect/stageBeated.c
+american, exe, 0x80134cd0, 0x0, src/stageselect/deleteContinue.s
+american, exe, 0x800ff7a4, 0x0, src/stageselect/deleteContinue3.s
+american, exe, 0x80100954, 0x0, src/stageselect/gamestart.c
+american, exe, 0x800fef94, 0x0, src/stageselect/title.c
+american, exe, 0x800feb8c, 0x0, src/stageselect/titleHook.s
+american, exe, 0x80134d1c, 0x0, src/stageselect/deletePress.s
+
+//State Folder
+american, exe, 0x8010ba10, 0x0, src/state/fade.c
+american, exe, 0x800f8404, 0x0, src/state/imageCancel.s
+american, exe, 0x800f96f8, 0x0, src/state/clutCancel.s
+american, exe, 0x800f979c, 0x0, src/state/clutCancel2.s
+american, exe, 0x800f983c, 0x0, src/state/clutCancel3.s
+american, exe, 0x800f9190, 0x0, src/state/clutCancel4.s
+american, exe, 0x80100ca8, 0x0, src/state/reload.s
+american, exe, 0x80100c54, 0x0, src/state/reset.s
+
+//Free area (0x1F30)
+american, exe, 0x80134e7c, 0x0, src/state/state.c src/timer/timer.c src/timer/fontflush.c src/stageselect/deleteContinue2.s src/stageselect/assignweapons.c src/stageselect/titleChr.c , FREE.BIN
+
+//Timer Folder
+american, exe, 0x800f7cc4, 0x0, src/timer/printHook.s
+american, exe, 0x80100e1c, 0x0, src/timer/timerHook.s
+american, exe, 0x8010101c, 0x0, src/timer/timerHook2.s
+american, exe, 0x801128d4, 0x0, src/timer/exit.s
+american, exe, 0x80113550, 0x0, src/timer/forceExit.c
+american, exe, 0x80112614, 0x0, src/timer/pauseMenuHook.s
+american, exe, 0x80100ff0, 0x0, src/timer/infiniteLives.s
