@@ -7,10 +7,10 @@
         "target": "localhost:3333",
         "remote": true,
         "stopAtConnect": true,
-        "executable": "C:/Users/kuumb/Desktop/Program/PSX_MODS/games/MegaMan8/mods/Practice/debug/mod.elf",
+        "executable": "debug/mod.elf",
         "gdbpath": "/usr/bin/gdb-multiarch",
         "windows": {
-            "gdbpath": "C:/Users/kuumb/AppData/Roaming/mips/mips/bin/gdb.exe",
+            "gdbpath": "gdb-multiarch",
         },
         "cwd": "${workspaceRoot}",
         "autorun": [
