@@ -1,11 +1,12 @@
 #include <common.h>
 #include <gpu.h>
+#include <object.h>
 #include "../practice.h"
 #define VariableSetsCount 11
 #define BuffersCount 5
 #define StateCoolDown 25
 #define StateTextTimer 25
-#define enemyData ((struct enemyStruct*)0x801c2b3c)
+#define enemyData ((Enemy*)0x801c2b3c)
 FadeStruct fades[2];
 void * freeAddress[] = {
     0x8018D83C, //Screen Data (end)

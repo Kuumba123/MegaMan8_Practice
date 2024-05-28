@@ -4,3 +4,7 @@ debug/
 backup/
 overlay.ld
 Makefile
+
+# C files
+*.o
+*.dep

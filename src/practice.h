@@ -2,7 +2,7 @@
 #define PRACTICE_H
 #include <sys/types.h>
 #include <stdbool.h>
-struct practiceStruct {
+typedef struct {
     int bossTimer;
     int roomTimer;
     int stageTimer;
@@ -34,13 +34,13 @@ struct practiceStruct {
     bool showStageTimer;
     bool stateMade;
     u_char stateTextTimer;
-};
+} Practice;
 typedef struct
 {
     DR_TPAGE dr;
     TILE tileRect;
 } FadeStruct;
-#define practice ((struct practiceStruct*)0x1f800100)[0]
+extern Practice practice;
 #define backupSpawnData ((u_char*)0x1f800300) //end of cache
 
 #endif

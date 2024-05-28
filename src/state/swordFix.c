@@ -1,2 +1,2 @@
 #include <common.h>
-ushort swordScreenLength = 0xA400;
+static ushort swordScreenLength = 0xA400;

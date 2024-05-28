@@ -2,7 +2,7 @@
 void SaveRoomTime(u_char * objP);
 void ShowRoomTime(u_char * objP);
 
-void (*transitionV_ObjectTable[])() = {
+static void (*transitionV_ObjectTable[])() = {
     &SaveRoomTime,
     &ShowRoomTime
 };
