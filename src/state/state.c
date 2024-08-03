@@ -50,11 +50,11 @@ int addressesSize[] = {
     0x20    //Clut Anime
 };
 
-#define fadeF *((ushort*)0x801b299a)
-#define fadeDone *((u_char*)0x8016ca90)
-#define fadeR *((u_char*)0x801b299b)
-#define fadeG *((ushort*)0x801b299c)
-#define fadeB *((u_char*)0x801b299d)
+#define fadeF *((uint16_t*)0x801b299a)
+#define fadeDone *((uint8_t*)0x8016ca90)
+#define fadeR *((uint8_t*)0x801b299b)
+#define fadeG *((uint16_t*)0x801b299c)
+#define fadeB *((uint8_t*)0x801b299d)
 
 void SaveState(){   //TODO: Fix Rush Textures Saving & Locked flag not being saved (Rush items check it)
     /*
@@ -123,12 +123,12 @@ void SaveState(){   //TODO: Fix Rush Textures Saving & Locked flag not being sav
     MemoryCopy(&practice.weaponAmmoBackup[0],0x801b1eac,12 * 4);
     practice.weaponBackup = ((char*)0x8016dc08)[0];
     practice.backupDoorFlag = ((char*)0x801b299e)[0];
-    practice.backupRefights = ((ushort*)0x801c3378)[0];
+    practice.backupRefights = ((uint16_t*)0x801c3378)[0];
     practice.backupSwapDisable = ((char*)0x801b2992)[0];
-    practice.backupWater = *((ushort*)0x801b2988);
+    practice.backupWater = *((uint16_t*)0x801b2988);
     practice.backupRushAmmo = *((char*)0x801b2990);
-    practice.rushFlags = *((ushort*)0x801c3352);
-    practice.rushFlags2 = *((ushort*)0x801c3354);
+    practice.rushFlags = *((uint16_t*)0x801c3352);
+    practice.rushFlags2 = *((uint16_t*)0x801c3354);
     practice.bossP = *((int*)0x801b297c);
     practice.showRush = *((char*)0x801b298f);
     practice.showedTxt = *((char*)0x801c337f);
@@ -204,12 +204,12 @@ void LoadState(){
     ((char*)0x801b2993)[0] = practice.backupMenuFlag;
     ((char*)0x8016dc08)[0] = practice.weaponBackup;
     ((char*)0x801b299e)[0] = practice.backupDoorFlag;
-    ((ushort*)0x801c3378)[0] = practice.backupRefights;
+    ((uint16_t*)0x801c3378)[0] = practice.backupRefights;
     ((char*)0x801b2992)[0] = practice.backupSwapDisable;
-    *((ushort*)0x801b2988) = practice.backupWater;
+    *((uint16_t*)0x801b2988) = practice.backupWater;
     *((char*)0x801b2990) = practice.backupRushAmmo;
-    *((ushort*)0x801c3352) = practice.rushFlags;
-    *((ushort*)0x801c3354) = practice.rushFlags2;
+    *((uint16_t*)0x801c3352) = practice.rushFlags;
+    *((uint16_t*)0x801c3354) = practice.rushFlags2;
     *((int*)0x801b297c) = practice.bossP;
     *((char*)0x801b298f) = practice.showRush;
     *((char*)0x801c337f) = practice.showedTxt;

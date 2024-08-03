@@ -1,6 +1,6 @@
 #include <common.h>
 
-void ExitCheck(u_char * puaseP){
+void ExitCheck(uint8_t * puaseP){
     if((buttonsPressed & 0x840) == 0){
         return;
     }

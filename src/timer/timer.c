@@ -81,7 +81,7 @@ void RunTimer2() // For Pause Menu
     DrawTime(practice.stageTimer);
 }
 
-void SaveRoomTime(u_char *objP)
+void SaveRoomTime(uint8_t *objP)
 {
     if (objP[6] == 0x10) // id
     {
@@ -101,7 +101,7 @@ void SaveRoomTime(u_char *objP)
         practice.roomTimer = 0;
     }
 }
-void ShowRoomTime(u_char *objP)
+void ShowRoomTime(uint8_t *objP)
 {
     DrawRoomTime(*((int *)(objP + 0x14)));
 
@@ -117,7 +117,7 @@ void ShowRoomTime(u_char *objP)
     }
 }
 
-void SaveRoomTime2(u_char *objP) //For Boss Doors
+void SaveRoomTime2(uint8_t *objP) //For Boss Doors
 {
     // store in object xspeed
     *((int *)(objP + 0x14)) = practice.roomTimer;
@@ -125,7 +125,7 @@ void SaveRoomTime2(u_char *objP) //For Boss Doors
 
     SetAnime(objP,1);
 }
-void ShowRoomTime2(u_char * objP)
+void ShowRoomTime2(uint8_t * objP)
 {
     DrawRoomTime(*((int *)(objP + 0x14)));
     AnimeAdvance(objP);

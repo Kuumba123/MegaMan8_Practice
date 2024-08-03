@@ -2,11 +2,11 @@
 #include <common.h>
 #include <gpu.h>
 #include "../practice.h"
-#define fadeF *((u_char*)0x801b299a)
-#define fadeDone *((u_char*)0x8016ca90)
-#define fadeR *((u_char*)0x801b299b)
-#define fadeG *((u_char*)0x801b299c)
-#define fadeB *((u_char*)0x801b299d)
+#define fadeF *((uint8_t*)0x801b299a)
+#define fadeDone *((uint8_t*)0x8016ca90)
+#define fadeR *((uint8_t*)0x801b299b)
+#define fadeG *((uint8_t*)0x801b299c)
+#define fadeB *((uint8_t*)0x801b299d)
 FadeStruct extern fades[2];
 
 void FadeEffect(){
@@ -15,9 +15,9 @@ void FadeEffect(){
         /*Define Texpage Command*/
         fades[buffer].dr.tag = (((int)&fades[buffer].tileRect) & 0xFFFFFF) + 0x01000000;
 
-        u_char colorR;
-        u_char colorG;
-        u_char colorB;
+        uint8_t colorR;
+        uint8_t colorG;
+        uint8_t colorB;
         if(fadeR < 0x80){
             fades[buffer].dr.code[0] = 0xE1000045;
             colorR = (fadeR ^ 0xFF) << 1;

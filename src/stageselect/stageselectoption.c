@@ -1,21 +1,21 @@
 #include <common.h>
 static struct selectStruct
 {
-    u_char mode;
-    u_char act;
-    u_char act2;
-    u_char pastStage;
-    u_char newStage;
+    uint8_t mode;
+    uint8_t act;
+    uint8_t act2;
+    uint8_t pastStage;
+    uint8_t newStage;
 };
-#define midPoint ((u_char *)0x801c3374)[0]
-#define checkPoint ((u_char *)0x801c3371)[0]
-#define midCheckPoints ((u_char *)0x80137af4)
+#define midPoint ((uint8_t *)0x801c3374)[0]
+#define checkPoint ((uint8_t *)0x801c3371)[0]
+#define midCheckPoints ((uint8_t *)0x80137af4)
 void AssignWeapons(int id,bool mid);
 void SelectOptions(struct selectStruct *selectP)
 {
     midPoint = 0; // Default
     checkPoint = 0;
-    uint cursor = 0;
+    uint32_t cursor = 0;
     char destMode = ((char *)selectP)[0xE];
     while (1)
     {
@@ -103,8 +103,8 @@ void SelectOptions(struct selectStruct *selectP)
             }
             else
             {
-                ((u_char *)selectP)[0xD] = 0;
-                ((u_char *)selectP)[0xE] = 0;
+                ((uint8_t *)selectP)[0xD] = 0;
+                ((uint8_t *)selectP)[0xE] = 0;
                 AssignWeapons(selectP->newStage,0);
                 if(selectP->newStage == 9){
                     ((char*)0x801c336c)[0] = 3;
