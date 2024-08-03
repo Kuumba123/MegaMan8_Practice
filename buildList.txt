@@ -23,6 +23,8 @@ american, exe, 0x800fef94, 0x0, src/stageselect/title.c
 american, exe, 0x800feb8c, 0x0, src/stageselect/titleHook.s
 american, exe, 0x80134d1c, 0x0, src/stageselect/deletePress.s
 
+american, exe, 0x800f831c, 0x0, src/stageselect/playerHook.s
+
 //State Folder
 american, exe, 0x8010ba10, 0x0, src/state/fade.c
 american, exe, 0x800f8404, 0x0, src/state/imageCancel.s
@@ -33,9 +35,6 @@ american, exe, 0x800f9190, 0x0, src/state/clutCancel4.s
 american, exe, 0x80100ca8, 0x0, src/state/reload.s
 american, exe, 0x80100c54, 0x0, src/state/reset.s
 
-//Free area (0x1F30)
-american, exe, 0x80134e7c, 0x0, src/state/state.c src/timer/timer.c src/timer/fontflush.c src/stageselect/deleteContinue2.s src/stageselect/assignweapons.c src/stageselect/titleChr.c , FREE.BIN
-
 //Timer Folder
 american, exe, 0x800f7cc4, 0x0, src/timer/printHook.s
 american, exe, 0x80100e1c, 0x0, src/timer/timerHook.s
@@ -44,3 +43,6 @@ american, exe, 0x801128d4, 0x0, src/timer/exit.s
 american, exe, 0x80113550, 0x0, src/timer/forceExit.c
 american, exe, 0x80112614, 0x0, src/timer/pauseMenuHook.s
 american, exe, 0x80100ff0, 0x0, src/timer/infiniteLives.s
+
+//Free area (0x1F30/7984)
+american, exe, 0x80134e7c, 0x0, src/state/state.c src/timer/timer.c src/timer/fontflush.c src/stageselect/deleteContinue2.s src/stageselect/assignweapons.c src/stageselect/titleChr.c src/stageselect/player.c , FREE.BIN
