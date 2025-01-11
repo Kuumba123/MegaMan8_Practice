@@ -12,4 +12,4 @@ Once you have all 3 go back to the github with Red-Hot's PSX modding repro and f
 
 Then put the MegaMan 8 PSX repro inside the `games` folder and then this repro inside your `mods` folder and put your MegaMan 8 ISO files inside the `build` folder (must be named `MM8.cue` and `MM8.bin`).
 
-Once your done setting up all the files go back to the MMX5 Practice repro and run the MOD.BAT file. The only options that you should really be interested in are the option `1` , `3` and `4`. 1st you should do option 3 to extract the game files for editing then option 1 to compile then option 4 to actually build the game disc. Once you have run option 4 and you should see the new ISO files in the build folder.
+Once your done setting up all the files go back to the MM8 Practice repro and run the MOD.BAT file. The only options that you should really be interested in are the option `1` , `3` and `4`. 1st you should do option 3 to extract the game files for editing then option 1 to compile then option 4 to actually build the game disc. Once you have run option 4 and you should see the new ISO files in the build folder.
