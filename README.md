@@ -6,7 +6,7 @@ This is a hack to assist with practicing speedruns of the PSX version of MegaMan
  * This PSX modding Repro https://github.com/mateusfavarin/psx-modding-toolchain
  * My MM8 Repro https://github.com/Kuumba123/MegaMan8_PS1_Modding
 
- Also your gonna need the psyq library files (`psyq-4.7-converted-full.7z`) from https://psx.arthus.net/sdk/Psy-Q/ and put them in the `gcc-psyq-converted` folder or PSX modding repro.
+ Also your gonna need the psyq library files (`psyq-4.7-converted-full.7z`) from https://psx.arthus.net/sdk/Psy-Q/ and put them in the `gcc-psyq-converted` folder of the PSX modding repro.
 
 Once you have all 3 go back to the github with Red-Hot's PSX modding repro and following the instructions there. If you can compile any of the examples included in that repro you should be able to compile this one.
 
